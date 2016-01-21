@@ -11,7 +11,6 @@ Puppet::Type.newtype(:echo) do
 
   newparam(:message) do
     desc "This is the content we will actually print.  If omitted the name will be printed"
-    EOT
   end
 
   validate do
