@@ -7,13 +7,39 @@
   "source": "https://github.com/ipcrm/ipcrm-echo",
   "project_page": "https://github.com/ipcrm/ipcrm-echo",
   "issues_url": "https://github.com/ipcrm/ipcrm-echo/issues",
-  "dependencies": [
-    {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
-    }
-  ],
+  "tags": ["utilities","print","echo","log"],
   "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
@@ -22,12 +48,40 @@
       ]
     },
     {
-      "operatingsystem": "RedHat",
+      "operatingsystem": "SLES",
       "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
+        "11 SP1"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "Server 2008",
+        "Server 2008 R2",
+        "Server 2012",
+        "Server 2012 R2",
+        "7",
+        "8"
       ]
     }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.7.0 < 2015.4.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
   ]
+
 }
