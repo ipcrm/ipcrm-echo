@@ -15,9 +15,15 @@ Puppet::Type.newtype(:echo) do
     EOT
   end
 
-  validate do
-    msg = parameters[:message] == '' ?  parameters[:name].value : parameters[:message].value
-    Puppet.notice("Echo/[#{parameters[:name].value}]/message: #{msg}")
+	validate do
+    if parameters[:message].nil?
+      msg = parameters[:name].value
+    else
+      msg = parameters[:message].value
+    end
+
+    # Print a message
+    Puppet.notice(self.path + "/message: #{msg}")
   end
 end
 
