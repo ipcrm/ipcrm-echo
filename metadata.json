@@ -1,0 +1,33 @@
+{
+  "name": "ipcrm-echo",
+  "version": "0.1.0",
+  "author": "ipcrm",
+  "summary": "Prints messages to Puppet report WITHOUT logging a change",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ipcrm/ipcrm-echo",
+  "project_page": "https://github.com/ipcrm/ipcrm-echo",
+  "issues_url": "https://github.com/ipcrm/ipcrm-echo/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
