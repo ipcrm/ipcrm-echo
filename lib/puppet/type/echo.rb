@@ -15,7 +15,7 @@ Puppet::Type.newtype(:echo) do
     EOT
   end
 
-	validate do
+  validate do
     if parameters[:message].nil?
       msg = parameters[:name].value
     else
