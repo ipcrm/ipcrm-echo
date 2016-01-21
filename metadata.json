@@ -1,6 +1,6 @@
 {
   "name": "ipcrm-echo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "ipcrm",
   "summary": "Prints messages to Puppet report WITHOUT logging a change",
   "license": "Apache-2.0",
