@@ -6,12 +6,11 @@ Puppet::Type.newtype(:echo) do
 
   newparam(:name) do
     isnamevar
-    desc "An arbitrary tag for your own reference; the name of the message."
+    desc "This is the name of the message."
   end
 
   newparam(:message) do
-    desc <<-EOT
-      The message we are printing
+    desc "This is the content we will actually print.  If omitted the name will be printed"
     EOT
   end
 
