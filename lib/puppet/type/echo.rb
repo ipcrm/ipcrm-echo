@@ -4,24 +4,26 @@ Puppet::Type.newtype(:echo) do
     logging a change
   EOT
 
-  newparam(:name) do
-    isnamevar
-    desc "This is the name of the message."
-  end
-
   newparam(:message) do
+    isnamevar
     desc "This is the content we will actually print.  If omitted the name will be printed"
   end
 
   validate do
-    if parameters[:message].nil?
-      msg = parameters[:name].value
-    else
-      msg = parameters[:message].value
-    end
+    output if self[:refreshonly] == :false
+  end
 
-    # Print a message
-    Puppet.notice(self.path + "/message: #{msg}")
+  newparam(:refreshonly) do
+    defaultto :false
+    newvalues(:true, :false)
+  end
+
+  def refresh
+    output
+  end
+
+  def output
+    Puppet.notice(self.path + "/message: #{self[:message]}")
   end
 end
 
