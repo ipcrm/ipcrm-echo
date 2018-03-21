@@ -30,6 +30,21 @@ The expected output looks like this:
 Notice: /Echo[TestMessage]/message: Test message
 ```
 
+You can optionally provide the `withpath` parameter to control whether or not the resource path is displayed:
+
+```puppet
+echo {'TestMessageNoPath':
+  message  => 'Test message',
+  withpath => false
+}
+```
+
+The expected output looks like this:
+
+```
+Notice: Test message
+```
+
 ## Issues
 There are no tests.
 
