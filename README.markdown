@@ -46,3 +46,17 @@ The expected output looks like this:
 ```
 Notice: Test message
 ```
+
+
+Optionally; you can control the loglevel facility the message is printed with:
+```puppet
+echo {'TestMessageNoPath':
+  message  => 'Test message',
+  loglevel => 'err',
+}
+```
+  
+The expected output looks like this:
+```
+Error: /Echo[TestMessage]/message: Test message
+```
