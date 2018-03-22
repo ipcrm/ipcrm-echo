@@ -25,6 +25,11 @@ Puppet::Type.newtype(:echo) do
     newvalues(:true, :false)
   end
 
+  newparam(:loglevel) do
+    defaultto :notice
+    newvalues(:debug, :info, :notice, :warning, :err, :alert, :emerg, :crit)
+  end
+
   def refresh
     output
   end
@@ -34,6 +39,6 @@ Puppet::Type.newtype(:echo) do
     if parameters[:withpath].value != :false
       msg = "#{path}/message: #{msg}"
     end
-    Puppet.notice(msg)
+    Puppet.public_send(self[:loglevel], msg)
   end
 end
