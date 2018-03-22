@@ -1,16 +1,16 @@
 Puppet::Type.newtype(:echo) do
-  @doc = <<-EOT
+  @doc = <<-DOC
     This type prints your message as a Notice in your report without
     logging a change
-  EOT
+  DOC
 
   newparam(:message) do
     isnamevar
-    desc "This is the content we will actually print.  If omitted the name will be printed"
+    desc 'This is the content we will actually print.  If omitted the name will be printed'
   end
 
   newparam(:withpath) do
-    desc "Whether to show the full object path. Defaults to true."
+    desc 'Whether to show the full object path. Defaults to true.'
     defaultto :true
 
     newvalues(:true, :false)
@@ -32,9 +32,8 @@ Puppet::Type.newtype(:echo) do
   def output
     msg = self[:message]
     if parameters[:withpath].value != :false
-      msg = "#{self.path}/message: #{msg}"
+      msg = "#{path}/message: #{msg}"
     end
     Puppet.notice(msg)
   end
 end
-
