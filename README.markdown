@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ipcrm/ipcrm-echo.svg?branch=master)](https://travis-ci.org/ipcrm/ipcrm-echo)
+
 #### Table of Contents
 
 1. [Overview](#overview)
