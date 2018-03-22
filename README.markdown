@@ -44,8 +44,3 @@ The expected output looks like this:
 ```
 Notice: Test message
 ```
-
-## Issues
-There are no tests.
-
-
