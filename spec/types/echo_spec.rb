@@ -36,7 +36,7 @@ describe 'echo', type: :type do
   context 'with loglevel set to `crit`' do
     it 'shows a critical log message' do
       expect(Puppet).to receive(:crit).with('/Echo[TestMessage]/message: TestMessage')
-      my_type.new(name: default_title)
+      my_type.new(name: default_title, loglevel: 'crit')
     end
   end
 end
