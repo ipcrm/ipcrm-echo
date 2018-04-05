@@ -1,3 +1,5 @@
+2018-02-22 Release 0.1.5
+- Add loglevel parameter (thx WhatsARanjit)
 2018-02-22 Release 0.1.4
 - Added refreshonly parameter (thx WhatsARanjit)
 - Added withpath param to control output format (thx jearls)
