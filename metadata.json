@@ -1,6 +1,6 @@
 {
   "name": "ipcrm-echo",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "ipcrm",
   "summary": "Prints messages to Puppet report without logging a change",
   "license": "Apache-2.0",
@@ -78,7 +78,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 6.0.0"
+      "version_requirement": ">= 3.0.0 < 7.0.0"
     }
   ],
   "tags": [
