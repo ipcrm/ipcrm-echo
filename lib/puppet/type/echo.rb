@@ -17,7 +17,7 @@ Puppet::Type.newtype(:echo) do
   end
 
   validate do
-    output if self[:refreshonly] == :false
+    output if self[:refreshonly] == :false && scheduled?
   end
 
   newparam(:refreshonly) do
@@ -40,5 +40,12 @@ Puppet::Type.newtype(:echo) do
       msg = "#{path}/message: #{msg}"
     end
     Puppet.public_send(self[:loglevel], msg)
+  end
+
+  def scheduled?
+    name = self[:schedule]
+    return true if name.to_s == ''
+    scheduler = catalog.resource(:schedule, name) || raise(_('Could not find schedule %{name}') % { name: name })
+    scheduler.match?
   end
 end
