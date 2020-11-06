@@ -1,5 +1,7 @@
-2020-11-20 Release 0.1.6
+2020-11-20 Release 0.1.7
 - Added support for the schedule meta parameter (thx hajee)
+2019-01-20 Release 0.1.6
+- Updating Metadata for Puppet 6 (thx Gabe-sky)
 2018-02-22 Release 0.1.5
 - Add loglevel parameter (thx WhatsARanjit)
 2018-02-22 Release 0.1.4
