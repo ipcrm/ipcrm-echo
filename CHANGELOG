@@ -1,3 +1,5 @@
+2020-11-20 Release 0.1.6
+- Added support for the schedule meta parameter (thx hajee)
 2018-02-22 Release 0.1.5
 - Add loglevel parameter (thx WhatsARanjit)
 2018-02-22 Release 0.1.4

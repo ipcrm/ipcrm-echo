@@ -60,3 +60,18 @@ The expected output looks like this:
 ```
 Error: /Echo[TestMessage]/message: Test message
 ```
+
+You als might want to show the message only during a [puppet schedule](https://puppet.com/docs/puppet/5.5/types/schedule.html). This in coordination with a resource change you have put on this schedule.
+
+```puppet
+schedule { 'maintenance':
+  range  => '2 - 4',
+  period => daily,
+  repeat => 1,
+}
+
+echo {'This will only show in the maintenace window':
+  message  => 'Test message',
+  schdule  => 'maintenance',
+}
+```
