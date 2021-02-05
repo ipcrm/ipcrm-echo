@@ -4,8 +4,11 @@ Puppet::Type.newtype(:echo) do
     logging a change
   DOC
 
+  newparam(:name) do
+    desc 'The name of the resource. This will be used if the `message` parameter isn\'t given'
+  end
+
   newparam(:message) do
-    isnamevar
     desc 'This is the content we will actually print.  If omitted the name will be printed'
   end
 
@@ -35,7 +38,7 @@ Puppet::Type.newtype(:echo) do
   end
 
   def output
-    msg = self[:message]
+    msg = self[:message] || self[:name]
     if parameters[:withpath].value != :false
       msg = "#{path}/message: #{msg}"
     end
