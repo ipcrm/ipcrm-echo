@@ -72,6 +72,6 @@ schedule { 'maintenance':
 
 echo {'This will only show in the maintenace window':
   message  => 'Test message',
-  schdule  => 'maintenance',
+  schedule => 'maintenance',
 }
 ```
